@@ -4,7 +4,7 @@ use std::env;
 
 pub fn run(config:Config) {
     let contents = fs::read_to_string(config.filename).unwrap_or_else(|err| {
-        println!("Error reading file: {}",err);
+        eprintln!("Error reading file: {}",err);
         process::exit(1);
     });
 
